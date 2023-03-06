@@ -9,6 +9,6 @@ class R2RSadapter(list:MutableList<String>) :BaseQuickAdapter<String,BaseViewHol
 
     override fun convert(holder: BaseViewHolder, item: String) {
         val no:TextView = holder.getView(R.id.no)
-        no.setText("${holder.layoutPosition+1},纵向滑动嵌套")
+        no.text = "${holder.layoutPosition+1},纵向滑动嵌套"
     }
 }
