@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.lyh.cn.nestedscrollablehost.adapter.r2r.R2RPadapter
 import com.lyh.cn.nestedscrollablehost.adapter.r2r.R2RSadapter
 
 class R2Ractivity :AppCompatActivity(){
@@ -15,5 +16,9 @@ class R2Ractivity :AppCompatActivity(){
         val adapter1 = R2RSadapter(StaticData.listA.toMutableList())
         recy1.layoutManager = LinearLayoutManager(this)
         recy1.adapter = adapter1
+        val recy2:RecyclerView = findViewById(R.id.recy2)
+        val adapter2 = R2RPadapter(StaticData.listA.toMutableList())
+        recy2.layoutManager = LinearLayoutManager(this,RecyclerView.HORIZONTAL,false)
+        recy2.adapter = adapter2
     }
 }

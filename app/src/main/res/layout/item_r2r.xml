@@ -16,6 +16,7 @@
         android:layout_height="match_parent"
         android:layout_alignParentRight="true">
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recy"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
     </com.lyh.cn.scrollablehost_lib.NestedScrollableHost>

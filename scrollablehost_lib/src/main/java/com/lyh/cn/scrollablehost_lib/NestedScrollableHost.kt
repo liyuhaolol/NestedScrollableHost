@@ -2,6 +2,7 @@ package com.lyh.cn.scrollablehost_lib
 
 import android.content.Context
 import android.util.AttributeSet
+import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewConfiguration
@@ -21,19 +22,13 @@ class NestedScrollableHost : FrameLayout {
     private var touchSlop = 0
     private var initialX = 0f
     private var initialY = 0f
-    //这里本意是外层ViewPager2内层Recyclerview，我发现去掉这个判断，似乎不影响外层Recyclerview内层ViewPager2的判断
-/*    private val parentView: ViewPager2?
-        get() {
-            var v: View? = parent as? View
-            while (v != null && v !is ViewPager2) {
-                v = v.parent as? View
-            }
-            return v as? ViewPager2
-        }*/
     private val parentView: ViewGroup?
         get() {
             var v: View? = parent as? View
-            while (v != null && (v !is ViewPager2 || v !is RecyclerView)) {
+            while (v != null){
+                if (v is RecyclerView || v is ViewPager2){
+                    break
+                }
                 v = v.parent as? View
             }
             return v as? ViewGroup
