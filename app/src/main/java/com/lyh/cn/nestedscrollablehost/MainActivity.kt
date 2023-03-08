@@ -34,6 +34,10 @@ class MainActivity : AppCompatActivity() ,OnClickListener{
                 intent = Intent(this@MainActivity,R2Ractivity::class.java)
                 startActivity(intent)
             }
+            R.id.btn2 ->{
+                intent = Intent(this@MainActivity,R2Vactivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 }

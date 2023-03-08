@@ -1,22 +1,21 @@
-package com.lyh.cn.nestedscrollablehost.adapter.r2r
+package com.lyh.cn.nestedscrollablehost.adapter.r2v
 
 import android.widget.TextView
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.widget.ViewPager2
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.lyh.cn.nestedscrollablehost.R
 import com.lyh.cn.nestedscrollablehost.StaticData
 import com.lyh.cn.nestedscrollablehost.adapter.itemadapter
 
-class R2RPadapter(list:MutableList<String>) :
-    BaseQuickAdapter<String, BaseViewHolder>(R.layout.item_r2r,list){
+class R2VPadapter(list:MutableList<String>) :
+    BaseQuickAdapter<String, BaseViewHolder>(R.layout.item_r2v,list){
 
     override fun convert(holder: BaseViewHolder, item: String) {
         val no: TextView = holder.getView(R.id.no)
         no.text = "${holder.layoutPosition+1},水平滑动嵌套"
-        val recy: RecyclerView = holder.getView(R.id.recy);
-        recy.layoutManager = LinearLayoutManager(context,RecyclerView.HORIZONTAL,false)
-        recy.adapter = itemadapter(StaticData.listB.toMutableList())
+        val vp: ViewPager2 = holder.getView(R.id.vp)
+        vp.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+        vp.adapter = itemadapter(StaticData.listB.toMutableList())
     }
 }

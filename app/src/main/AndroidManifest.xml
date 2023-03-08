@@ -21,6 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".R2Ractivity"/>
+        <activity android:name=".R2Vactivity"/>
     </application>
 
 </manifest>

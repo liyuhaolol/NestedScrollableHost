@@ -11,7 +11,7 @@ class R2Ractivity :AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_r2r)
+        setContentView(R.layout.activity_r)
         val recy1:RecyclerView = findViewById(R.id.recy1)
         val adapter1 = R2RSadapter(StaticData.listA.toMutableList())
         recy1.layoutManager = LinearLayoutManager(this)
