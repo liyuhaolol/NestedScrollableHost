@@ -5,8 +5,8 @@ import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.lyh.cn.nestedscrollablehost.R
 
-class itemadapter (list:MutableList<String>) :
-    BaseQuickAdapter<String, BaseViewHolder>(R.layout.item_r2r_r,list){
+class Itemadapter (list:MutableList<String>) :
+    BaseQuickAdapter<String, BaseViewHolder>(R.layout.item,list){
 
     override fun convert(holder: BaseViewHolder, item: String) {
         val no: TextView = holder.getView(R.id.num)

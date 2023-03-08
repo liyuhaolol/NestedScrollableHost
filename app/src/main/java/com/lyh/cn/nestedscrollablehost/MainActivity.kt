@@ -38,6 +38,10 @@ class MainActivity : AppCompatActivity() ,OnClickListener{
                 intent = Intent(this@MainActivity,R2Vactivity::class.java)
                 startActivity(intent)
             }
+            R.id.btn3 ->{
+                intent = Intent(this@MainActivity,V2Vactivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 }

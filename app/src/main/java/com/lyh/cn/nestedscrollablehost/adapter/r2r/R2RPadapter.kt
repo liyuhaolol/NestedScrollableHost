@@ -7,7 +7,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.lyh.cn.nestedscrollablehost.R
 import com.lyh.cn.nestedscrollablehost.StaticData
-import com.lyh.cn.nestedscrollablehost.adapter.itemadapter
+import com.lyh.cn.nestedscrollablehost.adapter.Itemadapter
 
 class R2RPadapter(list:MutableList<String>) :
     BaseQuickAdapter<String, BaseViewHolder>(R.layout.item_r2r,list){
@@ -17,6 +17,6 @@ class R2RPadapter(list:MutableList<String>) :
         no.text = "${holder.layoutPosition+1},水平滑动嵌套"
         val recy: RecyclerView = holder.getView(R.id.recy);
         recy.layoutManager = LinearLayoutManager(context,RecyclerView.HORIZONTAL,false)
-        recy.adapter = itemadapter(StaticData.listB.toMutableList())
+        recy.adapter = Itemadapter(StaticData.listB.toMutableList())
     }
 }

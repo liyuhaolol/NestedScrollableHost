@@ -22,6 +22,7 @@
         </activity>
         <activity android:name=".R2Ractivity"/>
         <activity android:name=".R2Vactivity"/>
+        <activity android:name=".V2Vactivity"/>
     </application>
 
 </manifest>
