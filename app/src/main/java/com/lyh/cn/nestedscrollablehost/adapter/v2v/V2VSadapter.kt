@@ -1,4 +1,4 @@
-package com.lyh.cn.nestedscrollablehost.adapter.p2p
+package com.lyh.cn.nestedscrollablehost.adapter.v2v
 
 import android.widget.TextView
 import androidx.viewpager2.widget.ViewPager2
@@ -8,13 +8,13 @@ import com.lyh.cn.nestedscrollablehost.R
 import com.lyh.cn.nestedscrollablehost.StaticData
 import com.lyh.cn.nestedscrollablehost.adapter.Itemadapter
 
-class P2PPadapter(list:MutableList<String>) :
-    BaseQuickAdapter<String, BaseViewHolder>(R.layout.item_p2p,list){
+class V2VSadapter(list:MutableList<String>) :
+    BaseQuickAdapter<String, BaseViewHolder>(R.layout.item_v2v,list){
     override fun convert(holder: BaseViewHolder, item: String) {
         val no: TextView = holder.getView(R.id.no)
-        no.text = "${holder.layoutPosition+1},水平滑动嵌套"
+        no.text = "${holder.layoutPosition+1},纵向滑动嵌套"
         val vp: ViewPager2 = holder.getView(R.id.vp);
-        vp.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+        vp.orientation = ViewPager2.ORIENTATION_VERTICAL
         vp.adapter = Itemadapter(StaticData.listB.toMutableList())
     }
 }

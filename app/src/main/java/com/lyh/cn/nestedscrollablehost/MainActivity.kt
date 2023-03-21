@@ -1,13 +1,11 @@
 package com.lyh.cn.nestedscrollablehost
 
 import android.content.Intent
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.View.OnClickListener
 import android.widget.Button
-import androidx.core.net.toUri
 
 class MainActivity : AppCompatActivity() ,OnClickListener{
     lateinit var btn1:Button
@@ -40,6 +38,10 @@ class MainActivity : AppCompatActivity() ,OnClickListener{
             }
             R.id.btn3 ->{
                 intent = Intent(this@MainActivity,V2Vactivity::class.java)
+                startActivity(intent)
+            }
+            R.id.btn4 ->{
+                intent = Intent(this@MainActivity,V2Ractivity::class.java)
                 startActivity(intent)
             }
         }
